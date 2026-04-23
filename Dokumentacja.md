@@ -19,4 +19,34 @@ system human-in-the-loop ze specjalist jako osoba decyzyjna.
 4. Decyzje kluczowe:
 - akceptacja reklamacji i zamówień w rejestrach,
 - akceptacja wiadomości e-mail wysyłanej do klienta,
-- 
+
+Notatki:
+Możliwe zautomatyzowanie z racji subiektywności oceny, np. stworzenie rejestru:
+AI 
+pobranie danych z wiadomości:
+Rejestr zawiera:
+dane:
+-> zdjęcia
+-> numer zamówienia -> konkretny zapis zamówienia np. ZZAAA23324234
+-> próba kategoryzacji wady przez AI, możliwość analizy treści np. pod względem występowania treści mogacej posluzyc do kategoryzacji,
+-> automatyczne utworzenie ticketu z nowym zgłoszeniem zawierajacym skategoryzowane zg łoszenie, dostęp do tablicy JIRA po api,
+->  Stworzenie wiadomości dla osoby obsługujacej zgłoszenie, do wysłania po akceptacji
+-> Stworzenie dodatkowego rejestru kategoryzujacego na podstawie nr zamówienia i SKU występujacego w zamowieniu reklamację, 
+
+
+1. Przeprocesowanie wiadomości e-mail z reklamacja przez AI/Kod.
+Po wystapieniu eventu czyli znalezieniu się nowej wiadomości w skrzynce e-mail,
+podłaczamy AI przeprocesowuje wiadomość pod katem wady, numeru zamówienia, 
+numeru partii, numeru linii produkcyjnej, 
+
+
+Uwaga:
+Czy na pewno na tym etapie czy może wcześniejpowinno być sprawdzone zamówienie w SAP wcześniej?
+
+AI kategoryzacja i wgranie zdjęć do chmury
+
+KOLEJNOSC 1.
+Konieczne utworzenie Rejestru z zamowieniami (SAP ERP ) ktory stworzy zamowienie z numerem sku produktu, linia produkcyjna na ktorej dany produkt był produkowany, 
+
+Możliwa wysyłka maili korzystajac z API Microsoft Exchange,
+Ustawienie by każdy email był odczytywany przez AI.
